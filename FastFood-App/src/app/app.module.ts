@@ -1,3 +1,5 @@
+import { ProductService } from './services/product.service';
+import { HeaderComponent } from './components/header/header.component';
 import { CopyService } from './services/copy.service';
 import { CopyPipe } from './pipes/copy.pipe';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
@@ -7,10 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function copyFactory(provider: CopyService) {
+  return () => provider.getData();
+}
+
+export function productFactory(provider: ProductService) {
   return () => provider.getData();
 }
 
@@ -18,6 +24,7 @@ export function copyFactory(provider: CopyService) {
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     CopyPipe
   ],
   imports: [
@@ -35,7 +42,14 @@ export function copyFactory(provider: CopyService) {
       useFactory: copyFactory,
       deps: [CopyService],
       multi: true,
-    }
+    },
+    ProductService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: productFactory,
+      deps: [ProductService],
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

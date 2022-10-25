@@ -1,7 +1,7 @@
 {
     "category": [
         {
-            "name": "menu.grill",
+            "name": "menu.FastFood",
             "img": "assets/img/products/grill.png",
             "products": [
                 {
@@ -78,8 +78,8 @@
                             "label": "custom.order",
                             "products": [
                                 {
-                                    "name": "meat.phopper",
-                                    "img": "assets/img/products/carne_phopher.png",
+                                    "name": "meat.res",
+                                    "img": "assets/img/products/carne_res.png",
                                     "optionSelected":  {
                                         "name": "same",
                                         "price": 0,
@@ -230,7 +230,7 @@
                                     
                                 },
                                 {
-                                    "name": "queen.onion.rings",
+                                    "name": "ff.onion.rings",
                                     "img": "assets/img/products/onion-ring.png",
                                     "options": [
                                         {
@@ -289,7 +289,7 @@
                     ]
                 },
                 {
-                    "name": "queen.big.egg",
+                    "name": "ff.big.egg",
                     "img": "assets/img/products/hamburguer-egg.png",
                     "price": 47.500,
                      "extras": [
@@ -437,8 +437,8 @@
                     ]
                 },
                 {
-                    "name": "big.phopper",
-                    "img": "assets/img/products/phopper.png",
+                    "name": "big.res",
+                    "img": "assets/img/products/res.png",
                     "price": 37.500,
                     "extras": [
                         {
@@ -509,8 +509,8 @@
                             "label": "custom.order",
                             "products": [
                                 {
-                                    "name": "meat.phopper",
-                                    "img": "assets/img/products/carne_phopher.png",
+                                    "name": "meat.res",
+                                    "img": "assets/img/products/carne_res.png",
                                     "optionSelected":  {
                                         "name": "same",
                                         "price": 0,
@@ -595,7 +595,7 @@
                                     
                                 },
                                 {
-                                    "name": "queen.onion.rings",
+                                    "name": "ff.onion.rings",
                                     "img": "assets/img/products/onion-ring.png",
                                     "options": [
                                         {
@@ -688,7 +688,7 @@
                                     
                                 },
                                 {
-                                    "name": "queen.onion.rings",
+                                    "name": "ff.onion.rings",
                                     "img": "assets/img/products/onion-ring.png",
                                     "options": [
                                         {
@@ -749,7 +749,7 @@
             ]
         },
         {
-            "name": "salad.more",
+            "name": "salad",
             "img": "assets/img/products/salad.png",
             "products": [
                 {
@@ -785,14 +785,14 @@
                     "price": 7.500
                 },
                 {
-                    "name": "queen.onion.rings",
+                    "name": "ff.onion.rings",
                     "img": "assets/img/products/onion-ring.png",
                     "price": 10000
                 }
             ]
         },
         {
-            "name": "drink.coffe",
+            "name": "drink.and.coffe",
             "img": "assets/img/products/cafe.png",
             "products": [
                 {
