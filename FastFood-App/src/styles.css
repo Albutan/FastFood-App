@@ -1,4 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: 'Courier New', Courier, monospace;
+    src: url('assets/GreasySpoonNF.ttf') format('truetype');
+} */
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+html body{
+    margin-top: 120px;
+    margin-bottom: 85px;
+}
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
