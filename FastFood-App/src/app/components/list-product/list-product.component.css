@@ -1,0 +1,16 @@
+#products .product{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#text{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#textprice{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

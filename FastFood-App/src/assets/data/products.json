@@ -291,7 +291,7 @@
                 {
                     "name": "ff.big.egg",
                     "img": "assets/img/products/hamburguer-egg.png",
-                    "price": 47.500,
+                    "price": 47500,
                      "extras": [
                         {
                             "label": "big.menu.question",
@@ -439,7 +439,7 @@
                 {
                     "name": "big.res",
                     "img": "assets/img/products/res.png",
-                    "price": 37.500,
+                    "price": 37500,
                     "extras": [
                         {
                             "label": "big.menu.question",
@@ -656,7 +656,7 @@
                 {
                     "name": "doritos.burguer",
                     "img": "assets/img/products/burguer-steak.png",
-                    "price": 43.750,
+                    "price": 43750,
                     "extras": [
                         {
                             "label": "big.menu.question",
@@ -755,7 +755,7 @@
                 {
                     "name": "salad.individual",
                     "img": "assets/img/products/salad.png",
-                    "price": 7.500
+                    "price": 7500
                 }
             ]
         },
@@ -766,12 +766,12 @@
                 {
                     "name": "dessert.kitkat",
                     "img": "assets/img/products/kitkat.png",
-                    "price": 7.500
+                    "price": 7500
                 },
                 {
                     "name": "dessert.oreo",
                     "img": "assets/img/products/oreo.png",
-                    "price": 7.500
+                    "price": 7500
                 }
             ]
         },
@@ -782,7 +782,7 @@
                 {
                     "name": "big.potato.classic",
                     "img": "assets/img/products/potato-classic.png",
-                    "price": 7.500
+                    "price": 7500
                 },
                 {
                     "name": "ff.onion.rings",
@@ -803,17 +803,17 @@
                 {
                     "name": "big.coca.cola.drink",
                     "img": "assets/img/products/coca-cola.png",
-                    "price": 7.500
+                    "price": 7500
                 },
                 {
                     "name": "big.fanta.drink",
                     "img": "assets/img/products/fanta.png",
-                    "price": 7.500
+                    "price": 7500
                 },
                 {
                     "name": "big.fanta.limon.drink",
                     "img": "assets/img/products/fanta-limon.png",
-                    "price": 7.500
+                    "price": 7500
                 }
             ]
         }
