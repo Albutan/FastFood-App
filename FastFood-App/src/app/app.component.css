@@ -13,3 +13,14 @@
     width: 100%;
     height: 70px;
 }
+
+#app .content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 150px);
+    
+}
+#app .content::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}

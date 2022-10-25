@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
 
 export function copyFactory(provider: CopyService) {
   return () => provider.getData();
@@ -25,6 +27,8 @@ export function productFactory(provider: ProductService) {
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ListCategoryComponent,
+    ListProductComponent,
     CopyPipe
   ],
   imports: [
