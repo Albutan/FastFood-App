@@ -1,6 +1,7 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from 'src/app/models/product';
 import { ProductService } from './../../services/product.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
 
@@ -11,6 +12,8 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class ProductComponent implements OnInit {
 
+  @ViewChild("modal_product", {static: false}) modalProduct:any;
+
   public product!: Product;
   public loadProduct: boolean;
   public extras : any;
@@ -19,7 +22,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private productService : ProductService,
     private router : Router,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private modalService: NgbModal
   ) { 
     this.extras =null;
     this.extraSelected = 0;
@@ -70,7 +74,8 @@ export class ProductComponent implements OnInit {
   madeOrder(){
     this.orderService.order.addProduct(this.product);
     console.log(this.orderService.order);
-    
+    this.productService.clearProducts();
+    this.modalService.open(this.modalProduct);
     this.router.navigate(['/list-category']);
   }
 

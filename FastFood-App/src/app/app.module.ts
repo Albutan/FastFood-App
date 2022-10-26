@@ -17,6 +17,7 @@ import { ProductComponent } from './components/product/product.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
+import { ProductsOrderComponent } from './components/productsOrder/productsOrder.component';
 
 export function copyFactory(provider: CopyService) {
   return () => provider.getData();
@@ -34,6 +35,7 @@ export function productFactory(provider: ProductService) {
     ListCategoryComponent,
     ListProductComponent,
     ProductComponent,
+    ProductsOrderComponent,
     CopyPipe,
   ],
   imports: [
@@ -45,6 +47,7 @@ export function productFactory(provider: ProductService) {
     MatCheckboxModule,
     MatRadioModule,
     FormsModule,
+    
   ],
   providers: [
     CopyService,

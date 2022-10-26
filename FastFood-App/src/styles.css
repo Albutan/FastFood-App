@@ -41,9 +41,24 @@ html body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#text-number{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #text-grande{
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.my-modal-dialog .modal-dialog{
+    max-width: 95%;
+    height: fit-content;
+}
+
+.my-modal-dialog .no-elements{
+    font-size: 24px;
+    color: #999;
 }
 
 html, body { height: 100%; }

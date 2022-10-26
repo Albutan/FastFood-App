@@ -15,7 +15,7 @@
 
         <ng-container *ngIf="extras">
           <div class="row g-0">
-            <div class="col-12" >
+            <div class="col-12">
               <h2 id="text">{{ extras.label | copy }}</h2>
             </div>
           </div>
@@ -33,77 +33,108 @@
                     ? "$ " + extra.options[0].price
                     : "$ 0"
                 }}</span>
-                <mat-checkbox [(ngModel)]="extra.options[0].active"></mat-checkbox>
+                <mat-checkbox
+                  [(ngModel)]="extra.options[0].active"
+                ></mat-checkbox>
               </ng-container>
               <ng-container *ngIf="extra.options.length > 1">
                 <span class="d-block" id="text">{{
                   "$ " + extra.optionSelected.price
                 }}</span>
-                <br>
+                <br />
                 <div class="block-radio m-auto">
-                  <mat-radio-group class="row" id="text" [(ngModel)]="extra.optionSelected">
+                  <mat-radio-group
+                    class="row"
+                    id="text"
+                    [(ngModel)]="extra.optionSelected"
+                  >
                     <mat-radio-button
                       class="col-md-5 col-sm-5 pb-3"
                       *ngFor="let option of extra.options; let first = first"
                       [checked]="first"
                       [value]="option"
-                      
                     >
                       {{ option.name | copy }}
                     </mat-radio-button>
                   </mat-radio-group>
                 </div>
-                
               </ng-container>
             </div>
           </div>
         </ng-container>
 
-        <ng-container *ngIf="!extras"> 
+        <ng-container *ngIf="!extras">
           <div class="row g-0">
             <div class="col-12">
-              <span class="d-block block-price" id="text">{{('price' | copy)+':'+' $ '++ product.price}}</span>
+              <span class="d-block block-price" id="text">{{
+                ("price" | copy) + ":" + " $ " + +product.price
+              }}</span>
             </div>
           </div>
         </ng-container>
 
         <div class="row g-0 mt-4 mb-4">
-          <button class="btn btn-block btn-primary rounded-0 mt-0 col-6" 
-          
-          *ngIf="hasPrevious()"
-          (click)="previous()">
-          {{'previous' | copy}}
-          </button>
-          <button class="btn btn-block btn-primary rounded-0 mt-0" 
-          [ngClass]="{'col-12': !hasPrevious(), 'col-6': hasPrevious()}"
-          *ngIf="hasNext()"
-          (click)="next()" >
-          {{'next' | copy}}
-          </button>
-          <button class="btn btn-block btn-primary rounded-0 mt-0" 
-          [ngClass]="{'col-12': !extras, 'col-6': extras}"
-          *ngIf="!extras || extraSelected === product.extras.length -1"
-          (click)="madeOrder()"
+          <button
+            class="btn btn-block btn-primary rounded-0 mt-0 col-6"
+            *ngIf="hasPrevious()"
+            (click)="previous()"
           >
-          {{'add.product' | copy}}
+            {{ "previous" | copy }}
+          </button>
+          <button
+            class="btn btn-block btn-primary rounded-0 mt-0"
+            [ngClass]="{ 'col-12': !hasPrevious(), 'col-6': hasPrevious() }"
+            *ngIf="hasNext()"
+            (click)="next()"
+          >
+            {{ "next" | copy }}
+          </button>
+          <button
+            class="btn btn-block btn-primary rounded-0 mt-0"
+            [ngClass]="{ 'col-12': !extras, 'col-6': extras }"
+            *ngIf="!extras || extraSelected === product.extras.length - 1"
+            (click)="madeOrder()"
+          >
+            {{ "add.product" | copy }}
           </button>
         </div>
 
         <div class="row mt-4 mb-4">
           <div>
-            <button class="btn btn-block btn-primary rounded-0 col-12" routerLink="['/list-category']" id="button">
-          {{'back' | copy}}
-          </button>
+            <button
+              class="btn btn-block btn-primary rounded-0 col-12"
+              routerLink="['/list-category']"
+              id="button"
+            >
+              {{ "back" | copy }}
+            </button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 
+<ng-template #modal_product let-modal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="text">{{'success.title' | copy}}</h5>
+      <button
+        type="button"
+        class="close"
+        (click)="modal.dismiss()"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="text">{{'success' | copy}}</div>
+  </div>
+</ng-template>
+
 <div class="h-100" *ngIf="!loadProduct">
-<div class="spinner">
-  <img src="assets/img/spinner.gif" alt="">
-</div>
+  <div class="spinner">
+    <img src="assets/img/spinner.gif" alt="" />
+  </div>
 </div>

@@ -1,0 +1,40 @@
+<div class="row" id="order">
+  <div class="col-12 products">
+    <div class="row" *ngFor="let product of orderService.order.productsOrder; let last=last">
+      <div class="col-lg-3 col-md-12">
+        <img [src]="product.img" class="img-small">
+      </div>
+      <div class="col-lg-3 col-md-12 text-center">
+        <span id="text">{{product.name | copy}}</span>
+        <ul>
+          <li *ngFor="let extra of product.getExtras()">
+            <span class="d-block" *ngIf="extra.selected" id="text">
+              {{(extra.name | copy) + ': ' + (extra.selected|copy)}}
+            </span>
+            <span class="d-block" *ngIf="extra.selected" id="text">
+              {{(extra.name | copy)}}
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-12 text-center">
+        <span id="text">{{' $ '+(product.totalOrder() * product.quantity)}}</span>
+      </div>
+
+      <div class="col-lg-3 col-md-12">
+        <i class="fa fa-minus-circle ml-4 mr-3" (click)="orderService.order.oneLessProduct(product)"></i>
+        <span id="text-number">{{product.quantity}}</span>
+        <i class="fa fa-plus-circle ml-10 mr-3" (click)="orderService.order.onePlusProduct(product)"></i>
+      </div>
+
+      <hr class="w-100" *ngIf="!last">
+    </div>
+  </div>
+
+  <div class="row" id="total">
+    <div class="col-12 text-center price-order">
+      <span class="d-block" id="text">{{('total.order' | copy)+ ': '+' $ '+( orderService.order.totalOrder())}}</span>
+    </div>
+  </div>
+
+</div>

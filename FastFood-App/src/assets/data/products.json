@@ -92,7 +92,7 @@
                                         },
                                         {
                                             "name": "extra",
-                                            "price": 1,
+                                            "price": 7500,
                                             "include": false
                                         }
                                     ]
@@ -257,7 +257,7 @@
                                     "img": "assets/img/products/coca-cola.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
@@ -267,7 +267,7 @@
                                     "img": "assets/img/products/fanta.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
@@ -277,7 +277,7 @@
                                     "img": "assets/img/products/fanta-limon.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]

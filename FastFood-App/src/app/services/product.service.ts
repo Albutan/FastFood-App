@@ -50,4 +50,9 @@ export class ProductService {
       );
     });
   }
+
+  clearProducts(){
+    this._data = _.cloneDeep(this._dataOriginal);
+    
+  }
 }

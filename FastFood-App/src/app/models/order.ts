@@ -1,6 +1,6 @@
+import { Product } from 'src/app/models/product';
 import { IOrder } from '../interfaces/iorder';
 import * as _ from 'lodash';
-import { Product } from './product';
 
 export class Order implements IOrder {
   constructor(data: any) {
@@ -28,4 +28,28 @@ export class Order implements IOrder {
       this.productsOrder.push(product);
     }
   }
+
+  onePlusProduct(product: Product) {
+    product.quantity++;
+  }
+
+  oneLessProduct(product: Product) {
+    product.quantity--;
+    if (product.quantity === 0) {
+      _.remove(this.productsOrder, (p) => _.isEqual(p, product));
+    }
+  }
+
+  quantityProducts(){
+    return this.productsOrder.length;
+  }
+
+  totalOrder(){
+    let total = 0;
+    _.forEach(this.productsOrder, p => {
+      total += p.totalOrder() * p.quantity;
+    })
+    return total;
+  }
+
 }
