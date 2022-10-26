@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ProductComponent implements OnInit {
 
   public product!: Product;
+  public loadProduct: boolean;
   public extras : any;
   public extraSelected: number;
 
@@ -19,7 +20,8 @@ export class ProductComponent implements OnInit {
     private router : Router
   ) { 
     this.extras =null;
-    this.extraSelected = 1;
+    this.extraSelected = 0;
+    this.loadProduct = false;
   }
 
   ngOnInit() {
@@ -32,9 +34,34 @@ export class ProductComponent implements OnInit {
       if(this.product.extras){
         this.extras = this.product.extras[this.extraSelected];
       }
-
+      this.loadProduct =true;
     }
+    
 
+  }
+
+  hasPrevious(){
+    if(!this.product.extras){
+      return false;
+    }
+    return this.product.extras[this.extraSelected - 1];
+  }
+
+  hasNext(){
+    if(!this.product.extras){
+      return false;
+    }
+    return this.product.extras[this.extraSelected + 1];
+  }
+
+  previous(){
+    this.extraSelected = this.extraSelected - 1;
+    this.extras = this.product.extras[this.extraSelected]
+  }
+
+  next(){
+    this.extraSelected = this.extraSelected + 1;
+    this.extras = this.product.extras[this.extraSelected]
   }
 
 }

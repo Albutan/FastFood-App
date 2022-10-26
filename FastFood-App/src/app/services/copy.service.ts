@@ -18,7 +18,7 @@ export class CopyService {
         resolve(true);
       }, error => {
         console.error('Error al traducir: '+ error);
-        reject(true);        
+        reject(true);
       })
     });
   }

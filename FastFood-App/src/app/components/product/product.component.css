@@ -6,3 +6,67 @@
 #product-page .extra{
     font-size: 22px;
 }
+
+#product-page ::ng-deep .mat-checkbox-frame,
+#product-page ::ng-deep .mat-checkbox-background{
+    border-radius: 50px;
+    /* background-color: #d64d0e; */
+}
+
+#product-page ::ng-deep .mat-checkbox-background svg{
+    display: none;
+}
+
+#product-page ::ng-deep .mat-checkbox-inner-container,
+#product-page ::ng-deep .mat-radio-container,
+#product-page ::ng-deep .mat-radio-outer-circle,
+#product-page ::ng-deep .mat-radio-inner-circle{
+    
+    width: 30px;
+    height: 30px;
+}
+
+#product-page ::ng-deep .mat-checkbox-background{
+    margin: 5px;
+}
+
+#product-page ::ng-deep .mat-radio-checked .mat-radio-inner-circle{
+    transform: scale(0.7);
+}
+
+#product-page ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+    background-color: #d64d0e;
+}
+
+/* #product-page ::ng-deep .block-radio{
+    position: relative;
+    /* padding-top: 20px; */
+/* } */
+
+/* #product-page ::ng-deep .mat-radio-label-content{
+    position: absolute;
+    top: 10px;
+}
+
+@media (min-width: 768px){
+    #product-page ::ng-deep .block-radio{
+        width: 75%;
+    }
+}
+@media (max-width: 768px){
+    #product-page ::ng-deep .block-radio{
+        width: 50%;
+    }
+} */ 
+/* 
+#product-page ::ng-deep .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+#product-page ::ng-deep .mat-checkbox:active(.mat-checkbox-disabled).mat-accent .mat-ripple-element{
+    background-color: #d64d0e;
+} */
+/* #product-page .block-price{
+    font-size: 36px;
+} */
+
+/* #button{
+    width: 100%;
+/* } */

@@ -1,4 +1,4 @@
-<div class="row" id="product-page">
+<div class="row" id="product-page" *ngIf="loadProduct">
   <div class="col-12">
     <div class="row">
       <div class="col-12 product">
@@ -14,13 +14,13 @@
         <!-- extras -->
 
         <ng-container *ngIf="extras">
-          <div class="row">
-            <div class="col-12">
-              <h2>{{ extras.label | copy }}</h2>
+          <div class="row g-0">
+            <div class="col-12" >
+              <h2 id="text">{{ extras.label | copy }}</h2>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row g-0">
             <div
               class="col-3 extra border"
               *ngFor="let extra of extras.products"
@@ -28,7 +28,7 @@
               <img [src]="extra.img" class="img-small" />
               <span class="d-block" id="text">{{ extra.name | copy }}</span>
               <ng-container *ngIf="extra.options.length === 1">
-                <span class="d-block">{{
+                <span class="d-block" id="text">{{
                   extra.options[0].active
                     ? "$ " + extra.options[0].price
                     : "$ 0"
@@ -36,26 +36,71 @@
                 <mat-checkbox [(ngModel)]="extra.options[0].active"></mat-checkbox>
               </ng-container>
               <ng-container *ngIf="extra.options.length > 1">
-                <span class="d-block">{{
+                <span class="d-block" id="text">{{
                   "$ " + extra.optionSelected.price
                 }}</span>
-                <mat-radio-group class="row" [(ngModel)]="extra.optionSelected">
-                  <mat-radio-button
-                    class="col-md-4 col-sm-12"
-                    *ngFor="let option of extra.options; let first = first"
-                    [checked]="first"
-                    [value]="option"
-                  >
-                    {{ option.name | copy }}
-                  </mat-radio-button>
-                </mat-radio-group>
+                <div class="block-radio m-auto">
+                  <mat-radio-group class="row" [(ngModel)]="extra.optionSelected">
+                    <mat-radio-button
+                      class="col-md-4 col-sm-12 pb-4"
+                      *ngFor="let option of extra.options; let first = first"
+                      [checked]="first"
+                      [value]="option"
+                    >
+                      {{ option.name | copy }}
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                
               </ng-container>
             </div>
           </div>
         </ng-container>
 
-        <ng-container *ngIf="!extras"> </ng-container>
+        <ng-container *ngIf="!extras"> 
+          <div class="row g-0">
+            <div class="col-12">
+              <span class="d-block block-price" id="text">{{('price' | copy)+':'+' $ '++ product.price}}</span>
+            </div>
+          </div>
+        </ng-container>
+
+        <div class="row g-0 mt-4 mb-4">
+          <button class="btn btn-block btn-primary rounded-0 mt-0 col-6" 
+          
+          *ngIf="hasPrevious()"
+          (click)="previous()">
+          {{'previous' | copy}}
+          </button>
+          <button class="btn btn-block btn-primary rounded-0 mt-0" 
+          [ngClass]="{'col-12': !hasPrevious(), 'col-6': hasPrevious()}"
+          *ngIf="hasNext()"
+          (click)="next()" >
+          {{'next' | copy}}
+          </button>
+          <button class="btn btn-block btn-primary rounded-0 mt-0" 
+          [ngClass]="{'col-12': !extras, 'col-6': extras}"
+          *ngIf="!extras || extraSelected === product.extras.length -1"
+          >
+          {{'add.product' | copy}}
+          </button>
+        </div>
+
+        <div class="row mt-4 mb-4">
+          <div>
+            <button class="btn btn-block btn-primary rounded-0 col-12" routerLink="['/list-category']" id="button">
+          {{'back' | copy}}
+          </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
+
+<div class="h-100" *ngIf="!loadProduct">
+<div class="spinner">
+  <img src="assets/img/spinner.gif" alt="">
+</div>
 </div>
