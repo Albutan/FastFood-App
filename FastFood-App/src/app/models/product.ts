@@ -12,13 +12,13 @@ export class Product implements IProduct {
   get extras(): any {
     return _.get(this, 'data.extras');
   }
-  get name(): string {
+  get name(): any {
     return _.get(this, 'data.name');
   }
   get img(): string {
     return _.get(this, 'data.img');
   }
-  get quantity(): number {
+  get quantity(): any {
     return _.get(this, 'data.quantity');
   }
   set quantity(value: number) {

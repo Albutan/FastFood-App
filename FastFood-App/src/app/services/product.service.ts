@@ -3,13 +3,19 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { Product } from '../models/product';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class ProductService {
   private _data: any;
   private _dataOriginal: any;
   private _productSelected: Product[] = [];
   private _productsSelected: Product[] = [];
 
+  get category() {
+    return _.get(this._data, 'category');
+  }
+  
   get productsSelected(): Product[] {
     return this._productsSelected;
   }
@@ -24,9 +30,7 @@ export class ProductService {
     this._productSelected = value;
   }
 
-  get category() {
-    return _.get(this._data, 'category');
-  }
+
 
   constructor(private http: HttpClient) {}
 

@@ -1,0 +1,61 @@
+<div class="row" id="product-page">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12 product">
+        <img [src]="product.img" class="img-large" />
+        <span class="d-block" id="text-grande">{{ product.name | copy }}</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-12 mt-4 mb-4 text-center">
+        <!-- extras -->
+
+        <ng-container *ngIf="extras">
+          <div class="row">
+            <div class="col-12">
+              <h2>{{ extras.label | copy }}</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-3 extra border"
+              *ngFor="let extra of extras.products"
+            >
+              <img [src]="extra.img" class="img-small" />
+              <span class="d-block" id="text">{{ extra.name | copy }}</span>
+              <ng-container *ngIf="extra.options.length === 1">
+                <span class="d-block">{{
+                  extra.options[0].active
+                    ? "$ " + extra.options[0].price
+                    : "$ 0"
+                }}</span>
+                <mat-checkbox [(ngModel)]="extra.options[0].active"></mat-checkbox>
+              </ng-container>
+              <ng-container *ngIf="extra.options.length > 1">
+                <span class="d-block">{{
+                  "$ " + extra.optionSelected.price
+                }}</span>
+                <mat-radio-group class="row" [(ngModel)]="extra.optionSelected">
+                  <mat-radio-button
+                    class="col-md-4 col-sm-12"
+                    *ngFor="let option of extra.options; let first = first"
+                    [checked]="first"
+                    [value]="option"
+                  >
+                    {{ option.name | copy }}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="!extras"> </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,20 +10,25 @@ import { Router } from '@angular/router';
 })
 export class ListProductComponent implements OnInit {
 
-  public listProducts: Product[] = [];
+  public listProduct: Product[] = [];
 
   constructor(
     private productService : ProductService,
     private router: Router
   ) { 
-    this.listProducts = [];
+    this.listProduct = [];
   }
 
   ngOnInit() {
-    this.listProducts = this.productService.productSelected;
-    if(!this.listProducts){
+    this.listProduct = this.productService.productsSelected;
+    if(!this.listProduct){
       this.router.navigate(['/list-category']);
     }
   }
+
+  selectProduct(product:any){
+    this.productService.productSelected = product;
+  }
+
 
 }

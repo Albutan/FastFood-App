@@ -20,6 +20,6 @@ export class ListCategoryComponent implements OnInit {
   }
 
   selectCategory(category:any){
-    this.productService.productSelected = category.products;
+    this.productService.productsSelected = category.products;
   }
 }

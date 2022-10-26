@@ -5,7 +5,6 @@
             "img": "assets/img/products/grill.png",
             "products": [
                 {
-                    
                     "name": "big.menu.bacon",
                     "img": "assets/img/products/bacon-burger.png",
                     "price": 45000,
@@ -19,7 +18,7 @@
                                     "options": [
                                         {
                                             "price": 2500,
-                                            "activate": false        
+                                            "activate": false
                                         }
                                     ]
                                 }
@@ -31,7 +30,7 @@
                                 {
                                     "name": "bacon",
                                     "img": "assets/img/products/bacon.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -53,7 +52,7 @@
                                 {
                                     "name": "cheese",
                                     "img": "assets/img/products/cheese.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -80,7 +79,7 @@
                                 {
                                     "name": "meat.res",
                                     "img": "assets/img/products/carne_res.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -101,7 +100,7 @@
                                 {
                                     "name": "lettuce",
                                     "img": "assets/img/products/lettuce.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -127,7 +126,7 @@
                                 {
                                     "name": "tomato",
                                     "img": "assets/img/products/tomato.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -149,7 +148,7 @@
                                 {
                                     "name": "crunchy.onion",
                                     "img": "assets/img/products/onion.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -172,7 +171,7 @@
                                 {
                                     "name": "mayonnaise",
                                     "img": "assets/img/products/mayonnaise.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -194,7 +193,7 @@
                                 {
                                     "name": "barbecue.sauce",
                                     "img": "assets/img/products/barbecue-sauce.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -227,7 +226,6 @@
                                             "activate": false
                                         }
                                     ]
-                                    
                                 },
                                 {
                                     "name": "ff.onion.rings",
@@ -292,7 +290,7 @@
                     "name": "ff.big.egg",
                     "img": "assets/img/products/hamburguer-egg.png",
                     "price": 47500,
-                     "extras": [
+                    "extras": [
                         {
                             "label": "big.menu.question",
                             "products": [
@@ -302,7 +300,7 @@
                                     "options": [
                                         {
                                             "price": 2500,
-                                            "activate": false        
+                                            "activate": false
                                         }
                                     ]
                                 }
@@ -314,7 +312,7 @@
                                 {
                                     "name": "lettuce",
                                     "img": "assets/img/products/lettuce.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -340,7 +338,7 @@
                                 {
                                     "name": "tomato",
                                     "img": "assets/img/products/tomato.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -362,7 +360,7 @@
                                 {
                                     "name": "mayonnaise",
                                     "img": "assets/img/products/mayonnaise.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -395,7 +393,6 @@
                                             "activate": false
                                         }
                                     ]
-                                    
                                 }
                             ]
                         },
@@ -450,7 +447,7 @@
                                     "options": [
                                         {
                                             "price": 2500,
-                                            "activate": false        
+                                            "activate": false
                                         }
                                     ]
                                 }
@@ -462,7 +459,7 @@
                                 {
                                     "name": "bacon",
                                     "img": "assets/img/products/bacon.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -484,7 +481,7 @@
                                 {
                                     "name": "cheese",
                                     "img": "assets/img/products/cheese.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -511,7 +508,7 @@
                                 {
                                     "name": "meat.res",
                                     "img": "assets/img/products/carne_res.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -532,7 +529,7 @@
                                 {
                                     "name": "lettuce",
                                     "img": "assets/img/products/lettuce.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0,
                                         "include": false
@@ -558,7 +555,7 @@
                                 {
                                     "name": "mayonnaise",
                                     "img": "assets/img/products/mayonnaise.png",
-                                    "optionSelected":  {
+                                    "optionSelected": {
                                         "name": "same",
                                         "price": 0
                                     },
@@ -577,7 +574,6 @@
                                         }
                                     ]
                                 }
-                                
                             ]
                         },
                         {
@@ -592,7 +588,6 @@
                                             "activate": false
                                         }
                                     ]
-                                    
                                 },
                                 {
                                     "name": "ff.onion.rings",
@@ -667,7 +662,7 @@
                                     "options": [
                                         {
                                             "price": 2500,
-                                            "activate": false        
+                                            "activate": false
                                         }
                                     ]
                                 }
@@ -685,7 +680,6 @@
                                             "activate": false
                                         }
                                     ]
-                                    
                                 },
                                 {
                                     "name": "ff.onion.rings",

@@ -9,12 +9,12 @@
     <div class="row" *ngIf="listcategory.length > 0">
       <div
         class="col-12 col-md-4 col-sm-6 category"
-        (click)="selectCategory(cat)"
+        (click)="selectCategory(category)"
         [routerLink]="['/list-product']"
-        *ngFor="let cat of listcategory"
+        *ngFor="let category of listcategory"
       >
-        <img [src]="cat.img" class="img-medium" id="img" />
-        <span class="d-block text-center" id="text">{{ cat.name | copy }}</span>
+        <img [src]="category.img" class="img-medium" id="img" />
+        <span class="d-block text-center" id="text">{{ category.name | copy }}</span>
       </div>
     </div>
   </div>

@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListCategoryComponent } from './components/list-category/list-category.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
+import { ProductComponent } from './components/product/product.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 export function copyFactory(provider: CopyService) {
   return () => provider.getData();
@@ -29,15 +33,18 @@ export function productFactory(provider: ProductService) {
     FooterComponent,
     ListCategoryComponent,
     ListProductComponent,
-    CopyPipe
+    ProductComponent,
+    CopyPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    FormsModule,
   ],
   providers: [
     CopyService,
@@ -55,6 +62,6 @@ export function productFactory(provider: ProductService) {
       multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
