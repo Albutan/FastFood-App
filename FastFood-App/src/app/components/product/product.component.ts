@@ -2,6 +2,7 @@ import { Product } from 'src/app/models/product';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +18,8 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private productService : ProductService,
-    private router : Router
+    private router : Router,
+    private orderService: OrderService
   ) { 
     this.extras =null;
     this.extraSelected = 0;
@@ -61,7 +63,15 @@ export class ProductComponent implements OnInit {
 
   next(){
     this.extraSelected = this.extraSelected + 1;
+
     this.extras = this.product.extras[this.extraSelected]
+  }
+
+  madeOrder(){
+    this.orderService.order.addProduct(this.product);
+    console.log(this.orderService.order);
+    
+    this.router.navigate(['/list-category']);
   }
 
 }

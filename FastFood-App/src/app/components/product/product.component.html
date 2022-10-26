@@ -39,13 +39,15 @@
                 <span class="d-block" id="text">{{
                   "$ " + extra.optionSelected.price
                 }}</span>
+                <br>
                 <div class="block-radio m-auto">
-                  <mat-radio-group class="row" [(ngModel)]="extra.optionSelected">
+                  <mat-radio-group class="row" id="text" [(ngModel)]="extra.optionSelected">
                     <mat-radio-button
-                      class="col-md-4 col-sm-12 pb-4"
+                      class="col-md-5 col-sm-5 pb-3"
                       *ngFor="let option of extra.options; let first = first"
                       [checked]="first"
                       [value]="option"
+                      
                     >
                       {{ option.name | copy }}
                     </mat-radio-button>
@@ -81,6 +83,7 @@
           <button class="btn btn-block btn-primary rounded-0 mt-0" 
           [ngClass]="{'col-12': !extras, 'col-6': extras}"
           *ngIf="!extras || extraSelected === product.extras.length -1"
+          (click)="madeOrder()"
           >
           {{'add.product' | copy}}
           </button>

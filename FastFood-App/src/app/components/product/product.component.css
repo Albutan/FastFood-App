@@ -38,6 +38,17 @@
     background-color: #d64d0e;
 }
 
+@media (min-width: 768px){
+    #product-page ::ng-deep .block-radio{
+        width: 75%;
+    }
+}
+@media (max-width: 768px){
+    #product-page ::ng-deep .block-radio{
+        width: 50%;
+    }
+} 
+
 /* #product-page ::ng-deep .block-radio{
     position: relative;
     /* padding-top: 20px; */
@@ -57,7 +68,7 @@
     #product-page ::ng-deep .block-radio{
         width: 50%;
     }
-} */ 
+} 
 /* 
 #product-page ::ng-deep .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
 #product-page ::ng-deep .mat-checkbox:active(.mat-checkbox-disabled).mat-accent .mat-ripple-element{
