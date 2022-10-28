@@ -48,14 +48,16 @@
                     id="text"
                     [(ngModel)]="extra.optionSelected"
                   >
-                    <mat-radio-button
-                      class="col-md-5 col-sm-5 pb-3"
-                      *ngFor="let option of extra.options; let first = first"
-                      [checked]="first"
-                      [value]="option"
-                    >
-                      {{ option.name | copy }}
-                    </mat-radio-button>
+                    
+                      <mat-radio-button
+                        class="col-md-5 col-sm-5 pb-3"
+                        *ngFor="let option of extra.options; let first = first"
+                        [checked]="first"
+                        [value]="option"
+                      >
+                        {{ option.name | copy }}
+                      </mat-radio-button>
+                    
                   </mat-radio-group>
                 </div>
               </ng-container>
@@ -73,16 +75,16 @@
           </div>
         </ng-container>
 
-        <div class="row g-0 mt-4 mb-4">
+        <div class="row g-0 mt-4 mb-4" id="text">
           <button
-            class="btn btn-block btn-primary rounded-0 mt-0 col-6"
+            class="btn btn-block btn-primary rounded-0 mt-0 col-6 button"
             *ngIf="hasPrevious()"
             (click)="previous()"
           >
             {{ "previous" | copy }}
           </button>
           <button
-            class="btn btn-block btn-primary rounded-0 mt-0"
+            class="btn btn-block btn-primary rounded-0 mt-0 button"
             [ngClass]="{ 'col-12': !hasPrevious(), 'col-6': hasPrevious() }"
             *ngIf="hasNext()"
             (click)="next()"
@@ -90,19 +92,18 @@
             {{ "next" | copy }}
           </button>
           <button
-            class="btn btn-block btn-primary rounded-0 mt-0"
+            class="btn btn-block btn-primary rounded-0 mt-0 button"
             [ngClass]="{ 'col-12': !extras, 'col-6': extras }"
             *ngIf="!extras || extraSelected === product.extras.length - 1"
-            (click)="madeOrder()"
           >
             {{ "add.product" | copy }}
           </button>
         </div>
 
-        <div class="row mt-4 mb-4">
+        <div class="row mt-4 mb-4" id="text">
           <div>
             <button
-              class="btn btn-block btn-primary rounded-0 col-12"
+              class="btn btn-block btn-primary rounded-0 col-12 button"
               routerLink="['/list-category']"
               id="button"
             >
@@ -118,10 +119,10 @@
 <ng-template #modal_product let-modal>
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="text">{{'success.title' | copy}}</h5>
+      <h5 class="modal-title" id="text">{{ "success.title" | copy }}</h5>
       <button
         type="button"
-        class="close"
+        class="close button"
         (click)="modal.dismiss()"
         data-dismiss="modal"
         aria-label="Close"
@@ -129,7 +130,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body" id="text">{{'success' | copy}}</div>
+    <div class="modal-body" id="text">{{ "success" | copy }}</div>
   </div>
 </ng-template>
 
