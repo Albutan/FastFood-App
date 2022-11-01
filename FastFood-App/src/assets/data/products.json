@@ -6,7 +6,7 @@
             "products": [
                 {
                     "name": "big.menu.bacon",
-                    "img": "assets/img/products/bacon-burger.png",
+                    "img": "assets/img/products/big-burger.png",
                     "price": 45000,
                     "extras": [
                         {
@@ -263,8 +263,8 @@
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.drink",
-                                    "img": "assets/img/products/fanta.png",
+                                    "name": "big.pepsi.drink",
+                                    "img": "assets/img/products/pepsi.png",
                                     "options": [
                                         {
                                             "price": 4500,
@@ -273,8 +273,8 @@
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.limon.drink",
-                                    "img": "assets/img/products/fanta-limon.png",
+                                    "name": "big.sprite.drink",
+                                    "img": "assets/img/products/sprite.png",
                                     "options": [
                                         {
                                             "price": 4500,
@@ -288,7 +288,7 @@
                 },
                 {
                     "name": "ff.big.egg",
-                    "img": "assets/img/products/hamburguer-egg.png",
+                    "img": "assets/img/products/meal-burger.png",
                     "price": 47500,
                     "extras": [
                         {
@@ -649,8 +649,8 @@
                     ]
                 },
                 {
-                    "name": "doritos.burguer",
-                    "img": "assets/img/products/burguer-steak.png",
+                    "name": "double.burguer",
+                    "img": "assets/img/products/double-meal.png",
                     "price": 43750,
                     "extras": [
                         {
@@ -758,13 +758,13 @@
             "img": "assets/img/products/postres.png",
             "products": [
                 {
-                    "name": "dessert.kitkat",
-                    "img": "assets/img/products/kitkat.png",
+                    "name": "dessert.chocolate-mal",
+                    "img": "assets/img/products/chocolate-mal.png",
                     "price": 7500
                 },
                 {
-                    "name": "dessert.oreo",
-                    "img": "assets/img/products/oreo.png",
+                    "name": "dessert.strawberry-mal",
+                    "img": "assets/img/products/strawberry-mal.png",
                     "price": 7500
                 }
             ]
@@ -786,8 +786,8 @@
             ]
         },
         {
-            "name": "drink.and.coffe",
-            "img": "assets/img/products/cafe.png",
+            "name": "drinks",
+            "img": "assets/img/products/bebidas.png",
             "products": [
                 {
                     "name": "coffe",
@@ -800,13 +800,13 @@
                     "price": 7500
                 },
                 {
-                    "name": "big.fanta.drink",
-                    "img": "assets/img/products/fanta.png",
+                    "name": "big.pepsi.drink",
+                    "img": "assets/img/products/pepsi.png",
                     "price": 7500
                 },
                 {
-                    "name": "big.fanta.limon.drink",
-                    "img": "assets/img/products/fanta-limon.png",
+                    "name": "big.sprite.drink",
+                    "img": "assets/img/products/sprite.png",
                     "price": 7500
                 }
             ]

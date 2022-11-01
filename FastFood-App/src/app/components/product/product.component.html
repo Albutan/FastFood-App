@@ -95,6 +95,7 @@
             class="btn btn-block btn-primary rounded-0 mt-0 button"
             [ngClass]="{ 'col-12': !extras, 'col-6': extras }"
             *ngIf="!extras || extraSelected === product.extras.length - 1"
+            (click)="madeOrder()"
           >
             {{ "add.product" | copy }}
           </button>
