@@ -404,27 +404,27 @@
                                     "img": "assets/img/products/coca-cola.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.drink",
-                                    "img": "assets/img/products/fanta.png",
+                                    "name": "big.pepsi.drink",
+                                    "img": "assets/img/products/pepsi.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.limon.drink",
-                                    "img": "assets/img/products/fanta-limon.png",
+                                    "name": "big.sprite.drink",
+                                    "img": "assets/img/products/sprite.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
@@ -619,27 +619,27 @@
                                     "img": "assets/img/products/coca-cola.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.drink",
-                                    "img": "assets/img/products/fanta.png",
+                                    "name": "big.pepsi.drink",
+                                    "img": "assets/img/products/pepsi.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.limon.drink",
-                                    "img": "assets/img/products/fanta-limon.png",
+                                    "name": "big.sprite.drink",
+                                    "img": "assets/img/products/sprite.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
@@ -711,27 +711,27 @@
                                     "img": "assets/img/products/coca-cola.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.drink",
-                                    "img": "assets/img/products/fanta.png",
+                                    "name": "big.pepsi.drink",
+                                    "img": "assets/img/products/pepsi.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
                                 },
                                 {
-                                    "name": "big.fanta.limon.drink",
-                                    "img": "assets/img/products/fanta-limon.png",
+                                    "name": "big.sprite.drink",
+                                    "img": "assets/img/products/sprite.png",
                                     "options": [
                                         {
-                                            "price": 1,
+                                            "price": 4500,
                                             "activate": false
                                         }
                                     ]
