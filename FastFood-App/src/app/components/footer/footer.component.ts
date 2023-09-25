@@ -10,6 +10,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   @ViewChild("modal_order", {static: false}) modal_order:any;
+  @ViewChild("modal_num_order", {static: false}) modal_num_order:any;
 
   constructor(
     private modalService: NgbModal,
@@ -23,6 +24,14 @@ export class FooterComponent implements OnInit {
     this.modalService.open(this.modal_order, {windowClass: "my-modal-dialog"}).result.then(result => {
       if(result === 'yes'){
         console.log('vamos a crear el pedido');
+        this.OrderService.createOrder().subscribe(data => {
+          console.log("se ha creado el objeto", data);
+          this.OrderService.clearOrder();
+          this.modalService.open(this.modal_num_order);
+        }, error => {
+          console.error("ha habido un error "+ error);
+          
+        })
         
       }else{
         console.log('se cancelo el pedido');
