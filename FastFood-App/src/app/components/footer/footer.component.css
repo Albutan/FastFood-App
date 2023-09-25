@@ -1,0 +1,10 @@
+#footer{
+    background: rgb(214, 77, 14);
+}
+
+#button{
+    width: 100%;
+    background-color: rgb(131, 83, 59);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,21 @@
+<div class="row mt-4 mb-4" id="category">
+  <div class="col-12">
+    <div class="row" *ngIf="listcategory.length === 0">
+      <div class="col-12 text-center">
+        <span>{{ "no.categories" | copy }}</span>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="listcategory.length > 0">
+      <div
+        class="col-12 col-md-4 col-sm-6 category"
+        (click)="selectCategory(category)"
+        [routerLink]="['/list-product']"
+        *ngFor="let category of listcategory"
+      >
+        <img [src]="category.img" class="img-medium" id="img" />
+        <span class="d-block text-center" id="text">{{ category.name | copy }}</span>
+      </div>
+    </div>
+  </div>
+</div>

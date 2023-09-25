@@ -1,0 +1,15 @@
+#header .c-pointer{
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+}
+
+#header{
+    background: rgb(214, 77, 14);
+}
+
+#header .title{
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+}
