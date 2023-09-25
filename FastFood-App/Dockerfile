@@ -28,7 +28,7 @@
 # EXPOSE 4300
 # CMD ["npm","start"]
 
-FROM node:lts-bullseye as base
+FROM node:16-alpine3.16 as base
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
