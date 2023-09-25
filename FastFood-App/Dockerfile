@@ -28,12 +28,15 @@
 # EXPOSE 4300
 # CMD ["npm","start"]
 
-FROM node:16-alpine3.16 as base
-WORKDIR /usr/local/app
-COPY ./ /usr/local/app
-RUN npm install
+FROM node:lts-bullseye as base
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
 RUN npm run build
 
-FROM nginx:latest
-COPY --from=base /usr/local/app/dist/fast-food-app /usr/share/nginx/html
+FROM nginx:alpine
+ADD ./config/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=base /app/dist /var/www/app/
 EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
