@@ -9,7 +9,7 @@ COPY --from=base /app/node_modules ./node_modules
 COPY . .
 USER root
 
-RUN npm build
+RUN npm run build
 RUN rm -rf node_modules
 RUN npm install
 
