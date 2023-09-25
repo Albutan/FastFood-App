@@ -17,10 +17,12 @@ RUN npm install
 # ENV NODE_ENV production
 # RUN addgroup -g 1001 -S nodejs
 # RUN adduser -S angular -u 1001
+# --from=build_image --chown=angular:nodejs
+# --from=build_image --chown=angular:nodejs
 
 WORKDIR /app
-COPY --from=build_image --chown=angular:nodejs /app/package.json ./
-COPY --from=build_image --chown=angular:nodejs /app/node_modules ./node_modules
+COPY  /app/package.json ./
+COPY  /app/node_modules ./node_modules
 
 USER angular
 EXPOSE 4300
