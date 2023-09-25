@@ -33,7 +33,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN NODE_OPTIONS="--max-old-space-size=8192"
 RUN npm run build
 EXPOSE 4200
 CMD [ "npm", "start" ]
