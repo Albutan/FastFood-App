@@ -40,4 +40,4 @@ COPY . .
 
 # RUN npm run build
 
-CMD [ "ng", "serve" ]
+CMD [ "npm", "start" ]
