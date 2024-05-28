@@ -13,14 +13,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up nodejs
-        uses: actions/setup-nodejs@v3
-        with:
-          node-version: '16'
+        run: |
+          echo "########################################"
+          echo "Vas a iniciar con la espera de 2 minutos"
+          echo "########################################"
+          sleep 45
+          echo "Bien!, vas a 45 segundos"
+          sleep 10
+          echo "Bien, solo faltan 5 segundos"
+          sleep 10
+          echo "si ves esto es por no funciono el action"
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the application
-        run: npm run build
 
       
