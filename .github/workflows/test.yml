@@ -21,7 +21,7 @@ jobs:
           echo "Bien!, vas a 45 segundos"
           sleep 10
           echo "Bien, solo faltan 5 segundos"
-          sleep 10
+          sleep 60
           echo "si ves esto es por no funciono el action"
 
 
