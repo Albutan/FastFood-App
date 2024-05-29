@@ -12,16 +12,29 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: Set up nodejs
+      - name: Validacion del action
         run: |
+          start_time=$(date +%s)
+
           echo "########################################"
           echo "Vas a iniciar con la espera de 2 minutos"
           echo "########################################"
           sleep 45
+
+          elapsed=$(( $(date +%s) - start_time ))
+          echo "Han pasado $elapsed segundos"
           echo "Bien!, vas a 45 segundos"
+
           sleep 10
+
+          elapsed=$(( $(date +%s) - start_time ))
+          echo "Han pasado $elapsed segundos"
           echo "Bien, solo faltan 5 segundos"
+
           sleep 60
+
+          elapsed=$(( $(date +%s) - start_time ))
+          echo "Han pasado $elapsed segundos"
           echo "si ves esto es por no funciono el action"
 
 
